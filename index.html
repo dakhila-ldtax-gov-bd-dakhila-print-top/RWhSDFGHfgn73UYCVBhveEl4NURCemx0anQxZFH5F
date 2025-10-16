@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
@@ -45,7 +45,6 @@
                             <div style="display: flex; margin-bottom: 1.25rem; justify-content: center; align-items: center;" class="print-button-container">
                                 <button onclick="printDiv('printArea')" style="padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.75rem; padding-right: 0.75rem; border-radius: 0.25rem; color: #ffffff; background-color: #3B82F6; border-color: #3B82F6;">🖨️ প্রিন্ট</button>
                             </div>
-
                             <div class="portlet-body">
                                 <div id="printArea" class="content" style="width: 815px; margin: 0 auto;">
                                     <div class="col-md-12">
@@ -64,22 +63,6 @@
                                                 background-color: #fff;
                                             }
 
-                                            .border_none {
-                                                border-top: none !important;
-                                            }
-
-                                            .table-bordered {
-                                                border: 1px solid #ddd;
-                                            }
-
-                                            .qrcode-print {
-                                                width: 100%;
-                                                display: list-item;
-                                                list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABKAQMAAAAmHlAyAAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA8UlEQVQokZXRMaoEMQgGYMFW8CpCWmGuLqQVvEpgWsHNzD52133VWn1F8msMwA/FZcQhlY0EPke4UWca2aHhX4zzXPSP81CRb0LwsL/cF7n8qucMLwKgG6/nmC9yFgbVkEZMKi1d2QiVvjCmNGKqasmyzmtymQc0kuvYB0wb0dOLcUkjTDDARdZIy3lJqTRijUUqUxt5zBBAlEY0tTyXWueZiBR32JvsCpHjDnuTYHdAvhb1yYN3Wzms85zkVEmNOw5mEnvj/qzYN301EkyDcM7OjDhX3LmfdEvh60GNgSfbXJ0QllPYGrlix99L/eAP9QCVGR4Asjab8AAAAABJRU5ErkJggg==);
-                                                list-style-position: inside;
-                                                background-repeat: no-repeat;
-                                            }
-
                                             .b1 {
                                                 border: 1px dotted;
                                                 padding: 2px;
@@ -96,25 +79,34 @@
                                             .text-center {
                                                 text-align: center
                                             }
+
+                                            /* This style ensures all cells in the collection table are vertically centered. */
+
+                                            .collection-table th,
+                                            .collection-table td {
+                                                vertical-align: middle !important;
+                                                text-align: center;
+                                                /* Ensures horizontal centering as well */
+                                            }
                                         </style>
                                         <style type="text/css" media="print">
                                             @page {
                                                 size: a4;
-                                                /* auto is the initial value */
                                                 margin: 0mm;
-                                                /* this affects the margin in the printer settings */
                                             }
 
                                             html {
                                                 background-color: #FFFFFF;
                                                 margin: 0px;
-                                                /* this affects the margin on the html before sending to printer */
                                             }
 
                                             body {
                                                 border: solid 0px blue;
                                                 margin: 0mm;
-                                                /* margin you want for the content */
+                                            }
+
+                                            .print-button-container {
+                                                display: none;
                                             }
                                         </style>
 
@@ -299,41 +291,26 @@
                                                         <p class="dotted_botton"> সর্বমোট (কথায়): দুই শত দশ টাকা মাত্র ।
                                                         </p>
                                                     </div>
-                                                    <!--         <div style="width:100% !important; margin:5px;">
-            <div style="width:70% !important; margin:0px auto; text-align: center;">
-                <p style="background-color: #ffeb3b91; border: dotted 1px; border-radius: 25px; padding: 10px"> 
-                    <b>এই হোল্ডিংটি ইউনিয়ন ভূমি অফিস কর্তৃক আর্কাইভ / স্থগিত করা আছে।</b>
-                </p>
-            </div>
-        </div>
-     -->
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div style="width: 350px; float: left;" align="left">
-                                                                <p style="margin: 0 !important;">
-                                                                    <!-- <p style="margin: 0 !important;">নোট: সর্বশেষ কর পরিশোধের সাল - ১৪৩০</p> -->
-                                                                    নোট: সর্বশেষ কর পরিশোধের সাল - 2026-2027 (অর্থবছর)
-                                                                </p>
-                                                                <p class="input_bangla"> চালান নং : ২৫২৬-০০০৩৫৯৫৬৮৩</p>
-                                                                <p>
-
-                                                                    তারিখ :
-                                                                    <div style="margin-top: -37px;margin-left: 10px;">
-                                                                        <p style="width: 115px;padding: 0;margin: 0;margin-left: 38px;margin-bottom: 2px;">৩১ আশ্বিন ১৪৩২</p><span style="border-top:1px solid; margin-left:36px;">১৬ অক্টোবর, ২০২৫</span></p>
-                                                                </div>
-                                                                </p>
-                                                            </div>
-                                                            <div style="width: 90px; float: left;" align="center">
-                                                                <div class="qrcode-print"></div>
-                                                            </div>
-                                                            <div style="width: 265px; float: right; text-align: right;font-size: 12px;font-family: 'kalpurush',Arial,sans-serif;">
-                                                                <p class="text-center" style="padding: 5px; ">এই দাখিলা ইলেক্ট্রনিকভাবে তৈরি করা হয়েছে, <br> কোন স্বাক্ষর প্রয়োজন নেই।</p>
-                                                            </div>
-                                                        </div>
-                                                    <div class="row">
-                                                            </div>
-                                            </div>
-                                        </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div style="width: 350px; float: left;" align="left">
+                                                        <p style="margin: 0 !important;">নোট: সর্বশেষ কর পরিশোধের সাল - 2026-2027 (অর্থবছর)</p>
+                                                        <p> চালান নং : ২৫২৬-০০০৩৫৯৫৬৮৩ </p>
+                                                        <p>তারিখ :
+                                                            <div style="margin-top: -37px;margin-left: 10px;">
+                                                                <p style="width: 115px;padding: 0;margin: 0;margin-left: 38px;margin-bottom: 2px;">৩১ আশ্বিন ১৪৩২</p><span style="border-top:1px solid; margin-left:36px;">১৬ অক্টোবর, ২০২৫</span></div>
+                                                        </p>
+                                                    </div>
+                                                    <div style="width: 90px; float: left; margin-top: 15px;" align="center">
+                                                        <div id="qrcode"></div>
+                                                    </div>
+                                                    <div style="width: 265px; float: right; text-align: right;font-size: 12px;font-family: 'kalpurush',Arial,sans-serif;">
+                                                        <p class="text-center" style="padding: 5px; margin-top: 10px;">এই দাখিলা ইলেক্ট্রনিকভাবে তৈরি করা হয়েছে, <br> কোন স্বাক্ষর প্রয়োজন নেই।</p>
+                                                    </div>
+                                                </div>
+												                                               </div>
+																							                                                    </div>
+                                            <div class="row">
                                                 <div class="col-md-12 text-right" style="width: 100%; position: absolute; bottom: 0; right: 0;">
                                                     <div style="width: 100%; border-top: 1px dotted gray; margin-top:15px;"></div>
                                                     <div style="padding: 0 10px;">1/1</div>
@@ -345,7 +322,6 @@
                             </div>
                         </div>
                     </div>
-                       </div>
                 </div>
             </div>
         </div>
@@ -367,7 +343,7 @@
             if (qrElement) {
                 qrElement.innerHTML = "";
                 new QRCode(qrElement, {
-                    text: "https://dakhila-ldtax-gov-bd-dakhila-print-top.github.io/RWhSDFGHfgn73UYCVBhveEl4NURCemx0anQxZFH5F/",
+                    text: "https://dakhila-ldtax-gov-bd-dakhila-print-top.github.io/RWhSDFGHfgn73UYCVBhveEl4NURCemx0anQxZFH5/",
                     width: 75,
                     height: 75,
                     correctLevel: QRCode.CorrectLevel.M
@@ -377,6 +353,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             generateQRCode();
         });
+		
     </script>
 </body>
 
